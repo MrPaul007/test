@@ -83,24 +83,142 @@
 //     // Change code above this line
 //   }
 
-const products = [
-  { name: 'Radar', price: 1300, quantity: 4 },
-  { name: 'Scanner', price: 2700, quantity: 3 },
-  { name: 'Droid', price: 400, quantity: 7 },
-  { name: 'Grip', price: 1200, quantity: 9 },
-];
+// const products = [
+//   { name: 'Radar', price: 1300, quantity: 4 },
+//   { name: 'Scanner', price: 2700, quantity: 3 },
+//   { name: 'Droid', price: 400, quantity: 7 },
+//   { name: 'Grip', price: 1200, quantity: 9 },
+// ];
 
-function calculateTotalPrice(productName) {
-  // Пиши код ниже этой строки
-  let price = 0;
-  for (const product of products) {
-    if (productName === product.name) {
-      price = product.price * product.quantity;
-    }
-  }
+// function calculateTotalPrice(productName) {
+//   // Пиши код ниже этой строки
+//   let price = 0;
+//   for (const product of products) {
+//     if (productName === product.name) {
+//       price = product.price * product.quantity;
+//     }
+//   }
 
-  return price;
-  // Пиши код выше этой строки
-}
+//   return price;
+//   // Пиши код выше этой строки
+// }
 
-console.log(calculateTotalPrice('Radar'));
+// console.log(calculateTotalPrice('Radar'));
+
+// const bookShelf = {
+//   books: ['The last kingdom', 'Haze', 'The guardian of dreams'],
+//   updateBook(oldName, newName) {
+//     // Change code below this line
+// 	for(let i = 0; i < this.books.length; i += 1){
+//       if(this.books[i] === oldName){
+//         this.books[i] = newName;
+//       };
+//     };
+	
+	
+//     // Change code above this line
+//   },
+// };
+
+// console.log(bookShelf.updateBook(111, 222))
+
+
+// const atTheOldToad = {
+//     potions: [
+//       { name: "Speed potion", price: 460 },
+//       { name: "Dragon breath", price: 780 },
+//       { name: "Stone skin", price: 520 },
+//     ],
+//     // Change code below this line
+//     getPotions() {
+//       return this.potions;
+//     },
+//     addPotion(newPotion) {
+//       for(const potion of this.potions) {
+//        if(potion.name === newPotion.name) {
+//         return `Error! Potion ${newPotion.name} is already in your inventory!`;
+//        }
+//       }; 
+//       this.potions.push(newPotion)
+//     },
+//     removePotion(potionName) {
+//       let potionNames = [];
+//       for(const potion of this.potions) {
+//         potionNames.push(potion.name)
+//       }; 
+//       const potionIndex = potionNames.indexOf(potionName);
+      
+//       if (potionIndex === -1) {
+//         return `Potion ${potionName} is not in inventory!`;
+//       }
+  
+//       this.potions.splice(potionIndex, 1);
+//     },
+
+//     updatePotionName(oldName, newName) {
+//       let potionNames = [];
+//       for(const potion of this.potions) {
+//         potionNames.push(potion.name)
+//       }; 
+//       const potionIndex = potionNames.indexOf(oldName);
+//       if (potionIndex === -1) {
+//         return `Potion ${oldName} is not in inventory!`;
+//       }
+
+//       this.potions[potionIndex].name = newName;
+//     },
+//   };
+  
+// console.log(atTheOldToad.updatePotionName("Stone pike", "Invulnerability potion"));
+// console.log(atTheOldToad.updatePotionName("Dragon breath", "Polymorth"))  
+//   console.log(atTheOldToad.potions)
+
+
+// const orders = [
+//     { email: 'solomon@topmail.ua', dish: 'Burger' },
+//     { email: 'artemis@coldmail.net', dish: 'Pizza' },
+//     { email: 'jacob@mail.com', dish: 'Taco' },
+//   ];
+  
+//   // Пиши код ниже этой строки
+//   function composeMessage(position) {
+//     return `Готовим ${this.dish} для ${this.email}. Ваш заказ ${position}-й в очереди.`;
+//   }
+//   const messages = [];
+  
+//   for(let i = 0; i < orders.length; i += 1) {
+//     messages.push(composeMessage.call(orders[i], i + 1));
+// };
+//   console.log(messages);
+
+// const service = {
+//     mailingList: ['mango@mail.com', 'poly@hotmail.de', 'ajax@jmail.net'],
+//     subscribe(email) {
+//       this.mailingList.push(email);
+//       return `Почта ${email} добавлена в рассылку.`;
+//     },
+//     unsubscribe(email) {
+//       this.mailingList = this.mailingList.filter((e) => e !== email);
+//       return `Почта ${email} удалена из рассылки.`;
+//     },
+//   };
+  
+//   function logAndInvokeAction(email, action) {
+//     console.log(`Выполняем действие с ${email}.`);
+//     return action(email);
+//   }
+  
+//   const firstInvoke = logAndInvokeAction('kiwi@mail.uk', service.subscribe.bind(service));
+//   console.log(firstInvoke);
+//   // Почта kiwi@mail.uk добавлена в рассылку.
+   
+//   console.log(service.mailingList);
+//   /* ['mango@mail.com', 
+//       'poly@hotmail.de', 
+//       'ajax@jmail.net', 
+//       'kiwi@mail.uk']*/
+//   const secondInvoke = logAndInvokeAction('poly@hotmail.de', service.unsubscribe.bind(service));
+//   console.log(secondInvoke);
+//   // Почта poly@hotmail.de удалена из рассылки.
+  
+//   console.log(service.mailingList); // ['mango@mail.com', 'ajax@jmail.net', 'kiwi@mail.uk']
